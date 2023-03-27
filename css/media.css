@@ -81,6 +81,10 @@
     .films__desc {
         text-align: center;
     }
+
+    .cartoons .container {
+      align-items: center;
+    }
     
 }
 
