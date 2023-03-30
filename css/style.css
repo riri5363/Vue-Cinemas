@@ -511,3 +511,117 @@ body {
 .collections__item:hover .collections__line:nth-last-child(1) {
   transform: translateY(200%);
 }
+
+.series {
+  padding-bottom: 63px;
+}
+
+.series:hover .title::after {
+  width: 100%;
+}
+
+.series__title {
+  margin-bottom: 54px;
+}
+
+.series__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 190px);
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.series__item {
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.series__item:nth-child(1) {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+
+.series__item:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.series__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+  transition: 500ms;
+}
+
+.series__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(95.68deg, rgba(35, 35, 35, 0.8) 10.86%, rgba(11, 11, 11, 0.6) 110.86%);
+}
+
+.series__item-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27px;
+  color: var(--white);
+  transition: 500ms;
+}
+
+.series__item:nth-child(1) .series__item-title {
+  font-size: 40px;
+  line-height: 45px;
+  margin-bottom: 27px;
+}
+
+.series__desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 30px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.series__icon {
+  margin-bottom: 20px;
+  transition: 500ms;
+}
+
+.series__item:hover .series__img {
+  transform: scale(1.2);
+}
+
+.series__item:hover .series__item-title {
+  transform: scale(0);
+}
+
+.series__item:hover .series__desc {
+  transform: scale(0);
+}
+
+.series__item:hover .series__btn {
+  transform: scale(1.8) translateY(-50px);
+}
+
+.series__item:hover .series__icon {
+  transform: scale(2) translateY(10px) rotateX(180deg);
+}
